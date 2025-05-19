@@ -42,7 +42,7 @@ export default function SleepStep({ onComplete }: SleepStepProps) {
         <h2 className="text-3xl font-bold text-card-foreground mb-4">Etapa 3: Sono</h2>
 
         <div className="p-4 bg-primary/10 rounded-lg border border-primary/20 mb-8">
-          <p className="text-primary-foreground text-[#000]">
+          <p className="text-[#000]">
             Se você conseguiu ter um bom desempenho nas etapas anteriores, você provavelmente vai ter um sono melhor!
             Gastar energia com atividades físicas e se alimentando de forma consistente vai com certeza te ajudar no sono.
           </p>
