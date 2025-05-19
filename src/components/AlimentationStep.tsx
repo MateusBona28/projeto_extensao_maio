@@ -42,7 +42,7 @@ export default function AlimentationStep({ onComplete }: AlimentationStepProps) 
 
         <div className="space-y-4 mb-8 text-left">
           <div className="p-4 bg-primary/10 rounded-lg border border-primary/20">
-            <p className="text-primary-foreground font-medium text-[black]">Mantenha sua dieta em dia!</p>
+            <p className="text-primary-foreground font-medium text-[#000]">Mantenha sua dieta em dia!</p>
           </div>
 
           <div className="p-4 bg-secondary/10 rounded-lg border border-secondary/20">

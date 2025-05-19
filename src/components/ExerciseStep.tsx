@@ -41,7 +41,7 @@ export default function ExerciseStep({ onComplete }: ExerciseStepProps) {
         <h2 className="text-3xl font-bold text-card-foreground mb-4">Etapa 2: Exercícios Físicos</h2>
 
         <div className="p-4 bg-primary/10 rounded-lg border border-primary/20 mb-8">
-          <p className="text-primary-foreground text-[black]">
+          <p className="text-primary-foreground text-[#000]">
             Lembrando que se você se alimentar de 30 a 60 minutos antes de praticar as atividades físicas, você vai ter um melhor desempenho!
           </p>
         </div>
