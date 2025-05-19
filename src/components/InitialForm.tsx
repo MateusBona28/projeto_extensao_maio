@@ -40,13 +40,18 @@ export default function InitialForm() {
       const parsedData = JSON.parse(savedData);
       setUserData(parsedData);
 
-      if (parsedData.lastSubmission === new Date().toISOString().split('T')[0]) {
-        if (parsedData.alimentation && parsedData.exercise && parsedData.sleep) {
-          return;
-        }
+      const today = new Date().toISOString().split('T')[0];
+
+      // Se já respondeu hoje e completou todas as etapas, mostra o dashboard
+      if (parsedData.lastSubmission === today &&
+        parsedData.alimentation &&
+        parsedData.exercise &&
+        parsedData.sleep) {
+        return;
       }
 
-      if (parsedData.name && parsedData.age) {
+      // Se já respondeu hoje mas não completou todas as etapas, continua de onde parou
+      if (parsedData.lastSubmission === today) {
         if (parsedData.alimentation && parsedData.exercise) {
           setCurrentStep('sleep');
         } else if (parsedData.alimentation) {
@@ -54,6 +59,12 @@ export default function InitialForm() {
         } else {
           setCurrentStep('alimentation');
         }
+        return;
+      }
+
+      // Se é um novo dia, começa da etapa 1 (alimentação)
+      if (parsedData.name && parsedData.age) {
+        setCurrentStep('alimentation');
       }
     }
   }, []);
